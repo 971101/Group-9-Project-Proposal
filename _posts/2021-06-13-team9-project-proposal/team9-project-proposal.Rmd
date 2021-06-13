@@ -1,7 +1,6 @@
 ---
-title: "Team9 project proposal"
+title: "Team 9 project proposal"
 description: |
-  A short description of the post.
 author:
   - name: Qian Ziwei, Li Zhen and Tang Yue
     url: https://example.com/norajones
