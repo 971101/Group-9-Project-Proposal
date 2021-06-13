@@ -1,7 +1,7 @@
-name: "Group 9 Project Proposal"
-title: "Group 9 Project Proposal"
+name: "Team 9 Project Proposal"
+title: "Team 9 Project Proposal"
 description: |
-  Group 9 Project Proposal
+  Team 9 Project Proposal
 output_dir: "_site"
 navbar:
   right:
