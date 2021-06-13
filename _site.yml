@@ -1,0 +1,12 @@
+name: "Group 9 Project Proposal"
+title: "Group 9 Project Proposal"
+description: |
+  Group 9 Project Proposal
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article

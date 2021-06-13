@@ -1,0 +1,5 @@
+---
+title: "Group 9 Project Proposal"
+site: distill::distill_website
+listing: posts
+---
