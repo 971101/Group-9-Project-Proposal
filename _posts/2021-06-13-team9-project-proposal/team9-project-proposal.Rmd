@@ -28,7 +28,7 @@ In the country island of Kronos, the increasing noxious effects on health and fa
 As analysts, we were assigned with several tasks in order to identify risks and how they could have been mitigated more effectively.
 
 ### Objective
-Tasks are
+Using data and visual analytics to evaluate the changing levels of risk to the public and recommend actions for first responder:
 
 * Distinguish meaningful event reports from typical chatter from junk or spam.
 * Evaluate the level of the risk to the public evolves over the course of the evening. Consider the potential consequences of the situation and the number of people who could be affected.
@@ -44,7 +44,8 @@ The data source is from [<font color = blue>*Vast Challenge 2021.*</font>](http:
 
 * Microblog records that have been identified by automated filters as being potentially relevant to the ongoing incident.
 * Text transcripts of emergency dispatches by the Abila, Kronos local police and fire departments.
-* Maps of Abila and Kronos Island.
+* Geospatial data and map of Abila and Kronos Island.
+* Ma and background documents.
 
 ---
 
@@ -52,27 +53,38 @@ The data source is from [<font color = blue>*Vast Challenge 2021.*</font>](http:
   
 The overall procedure is depicted in the picture.
 
-![](img/img1.PNG)
+![](img/img2.PNG)
 
 ### The task one
-We will use keywords, posting authors and other relevant information to identify meaningful information and spam information. We also compare the records of the police and fire department to verify if it is valid information.
-We would like to use two ways to show the results.
+1.	Using basic feature of junk and meaningful records in microblog to conduct initial identification and classification.
+2.	Compare the records of the police and fire department to classify false posts and valid event records, further improving features extraction. 
+3.	Classify meaningful record and junk.
+
+Two methods would be used to present to identify significant record and junk:
 
 * Using word cloud present key words of meaningful post and junk post.
 * Using histogram or bar chart present the words features(like sentence length) of meaningful and junk post.
 
 ### The task two
-We will ranking risks from level 1 to level 5 according to the severity. Level 5 is the most serious.
+Meaningful Record after validation would be used in task 2.  
 
-This is the original thought of visualization.
+* Label event with risk involved which ranking from level 1 to level 5 according to its influence and severity.  And level 5 is the most serious.
+* Using regular expression to extract the number of people involved in events. 
+*	The distribution of event with multiple risks would be presented over the course of the evening.
+
+The original thought of visualization is below:
 
 ![](img/img2.jpg)
 
 ### The task three
-We would like to compare the map and event information to show events took place in which area of the island.
+Meaningful Record after validation would be used in task 3.  
+
+* Integrating geospatial data to present the location of events with various risks.
+*	Clustering events based on variables ‘Time’, ‘Latitude’, ‘Longitude’ and risk level to show event distributions with some same features.
+
+The original thought of visualization is below:
+
 
 ![](img/img3.jpg)
-
-And then we want to use cluster model(variables: time, latitude, longitude and risk level) to classify events.
 
 ### The task four

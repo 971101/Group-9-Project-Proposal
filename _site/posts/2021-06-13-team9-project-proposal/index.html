@@ -114,7 +114,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["img/img1.PNG","img/img2.jpg","img/img3.jpg","team9-project-proposal_files/anchor-4.2.2/anchor.min.js","team9-project-proposal_files/bowser-1.9.3/bowser.min.js","team9-project-proposal_files/distill-2.2.21/template.v2.js","team9-project-proposal_files/jquery-1.11.3/jquery.min.js","team9-project-proposal_files/popper-2.6.0/popper.min.js","team9-project-proposal_files/tippy-6.2.7/tippy-bundle.umd.min.js","team9-project-proposal_files/tippy-6.2.7/tippy-light-border.css","team9-project-proposal_files/tippy-6.2.7/tippy.css","team9-project-proposal_files/tippy-6.2.7/tippy.umd.min.js","team9-project-proposal_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["img/img1.PNG","img/img2.jpg","img/img2.PNG","img/img3.jpg","team9-project-proposal_files/anchor-4.2.2/anchor.min.js","team9-project-proposal_files/bowser-1.9.3/bowser.min.js","team9-project-proposal_files/distill-2.2.21/template.v2.js","team9-project-proposal_files/jquery-1.11.3/jquery.min.js","team9-project-proposal_files/popper-2.6.0/popper.min.js","team9-project-proposal_files/tippy-6.2.7/tippy-bundle.umd.min.js","team9-project-proposal_files/tippy-6.2.7/tippy-light-border.css","team9-project-proposal_files/tippy-6.2.7/tippy.css","team9-project-proposal_files/tippy-6.2.7/tippy.umd.min.js","team9-project-proposal_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2117,7 +2117,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>In the country island of Kronos, the increasing noxious effects on health and farming have been related to the uncontrolled activity of GAStech, a natural gas operator, supported by corrupt government officials. On January 20th, 2014, a corporate meeting is held to celebrate the new-found fortune because of the initial public offering of the company. However, a series of rare events occur that lead to the disappearance of several employees. The Protectors of Kronos (POK), a social movement organization that has been fighting against water contamination and government corruption, is suspected in the disappearance.</p>
 <p>As analysts, we were assigned with several tasks in order to identify risks and how they could have been mitigated more effectively.</p>
 <h3 id="objective">Objective</h3>
-<p>Tasks are</p>
+<p>Using data and visual analytics to evaluate the changing levels of risk to the public and recommend actions for first responder:</p>
 <ul>
 <li>Distinguish meaningful event reports from typical chatter from junk or spam.</li>
 <li>Evaluate the level of the risk to the public evolves over the course of the evening. Consider the potential consequences of the situation and the number of people who could be affected.</li>
@@ -2130,26 +2130,41 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul>
 <li>Microblog records that have been identified by automated filters as being potentially relevant to the ongoing incident.</li>
 <li>Text transcripts of emergency dispatches by the Abila, Kronos local police and fire departments.</li>
-<li>Maps of Abila and Kronos Island.</li>
+<li>Geospatial data and map of Abila and Kronos Island.</li>
+<li>Ma and background documents.</li>
 </ul>
 <hr />
 <h1 id="the-overall-procedure.">3.0 The overall procedure.</h1>
 <p>The overall procedure is depicted in the picture.</p>
-<p><img src="img/img1.PNG" /></p>
+<p><img src="img/img2.PNG" /></p>
 <h3 id="the-task-one">The task one</h3>
-<p>We will use keywords, posting authors and other relevant information to identify meaningful information and spam information. We also compare the records of the police and fire department to verify if it is valid information. We would like to use two ways to show the results.</p>
+<ol type="1">
+<li>Using basic feature of junk and meaningful records in microblog to conduct initial identification and classification.</li>
+<li>Compare the records of the police and fire department to classify false posts and valid event records, further improving features extraction.</li>
+<li>Classify meaningful record and junk.</li>
+</ol>
+<p>Two methods would be used to present to identify significant record and junk:</p>
 <ul>
 <li>Using word cloud present key words of meaningful post and junk post.</li>
 <li>Using histogram or bar chart present the words features(like sentence length) of meaningful and junk post.</li>
 </ul>
 <h3 id="the-task-two">The task two</h3>
-<p>We will ranking risks from level 1 to level 5 according to the severity. Level 5 is the most serious.</p>
-<p>This is the original thought of visualization.</p>
+<p>Meaningful Record after validation would be used in task 2.</p>
+<ul>
+<li>Label event with risk involved which ranking from level 1 to level 5 according to its influence and severity. And level 5 is the most serious.</li>
+<li>Using regular expression to extract the number of people involved in events.</li>
+<li>The distribution of event with multiple risks would be presented over the course of the evening.</li>
+</ul>
+<p>The original thought of visualization is below:</p>
 <p><img src="img/img2.jpg" /></p>
 <h3 id="the-task-three">The task three</h3>
-<p>We would like to compare the map and event information to show events took place in which area of the island.</p>
+<p>Meaningful Record after validation would be used in task 3.</p>
+<ul>
+<li>Integrating geospatial data to present the location of events with various risks.</li>
+<li>Clustering events based on variables ‘Time’, ‘Latitude’, ‘Longitude’ and risk level to show event distributions with some same features.</li>
+</ul>
+<p>The original thought of visualization is below:</p>
 <p><img src="img/img3.jpg" /></p>
-<p>And then we want to use cluster model(variables: time, latitude, longitude and risk level) to classify events.</p>
 <h3 id="the-task-four">The task four</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
